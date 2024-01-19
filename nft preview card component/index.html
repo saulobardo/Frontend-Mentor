@@ -9,39 +9,45 @@
   <title>Frontend Mentor | NFT preview card component</title>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;700&display=swap');
-    .attribution { font-size: 11px; text-align: center; color: gray; }
-    .attribution a { color: hsl(225, 6%, 87%); }
-      body {background-color: #0d1a2d ; font-family: Nunito;  }
-      .card {background-color: #15273f;}
-      .gray {color: #8098b7; }
-      .white{color: white}
-      .ether {color: #1cf0ee; font-weight: bolder ;}
-      .photo{ width: 100px;
-              height: 100px;
-              border-radius: 50%;
-              border: white solid; }
-
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+        body{font-family: Nunito ;
+          background-color: #0c172a; position: relative; height: 100vh; margin:0;}
+        div{ width: 230px; height: 435px; padding: 20px; text-align:left; ;
+          position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+          border-radius: 8px 8px;
+          background-color: #162840;}
+        .gray{ color: #8094b7}
+        .clock{color: #8094b7;} 
+        .ethereum {color:#00f5f1; margin-right: 50px; }
+        .icon-ethereum { vertical-align: middle; margin-right: 5px;}
+        .icon-clock{ vertical-align: middle; margin-right: 5px;  }
+        .white{color: white; cursor: pointer; transition: color 0.3s;}
+        .white:hover {color: #00f5f1;}
+        .photo {vertical-align: middle; margin-right: 10px;  width: 30px; border: 1px solid white; border-radius: 50%;}
+        #ether {height: 230px; border-radius: 8px 8px; }
+        #ether:hover {content: url(./images/icon-view.svg);  background-color: rgba(00, 247, 241, 1)}
+        
+         a, p{font-size: 14px;}
+         
+       
 </style>
 </head>
 <body>
-      <div class="card">
-        <img src="./images/image-equilibrium.jpg" alt="Erro">
-        <h1 class="white">Equilibrium #3429</h1>
-        <p class="gray">Our Equilibrium collection promotes balance and calm.</p>
-        <img src="./images/icon-ethereum.svg" alt=""><span class = "ether">0.041 ETH</span> 
-        <img src="./images/icon-clock.svg" alt=""><span class = "gray" ><strong>3 days left</strong></span>
-        <br>
-        <img class="photo" src="./images/image-avatar.png" alt=""><span class="gray" >Creation of <span class="white">Jules Wyvern</span> </span>
-      </div>
-  
-
-
-  
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/saulobardo">Saulobardo</a>.
-  </div>
+     <div>
+          <img id="ether" src="./images/image-equilibrium.jpg"> 
+          <h3 class="white">Equilibrium #3429 </h3>
+          <p class="gray">Our Equilibrium collection promotes balance and calm.</p>
+          <p class="icon">
+            <a class="ethereum"><img class="icon-clock"src= "./images/icon-ethereum.svg" alt=""><strong>0.041 ETH</strong></a>
+            <a class="clock"><img class="icon-ethereum" src= "./images/icon-clock.svg" alt=" "><strong>3 days left</strong></a>
+          </p>
+          <hr><!-- Don't support CSS anymore, hr is just a semantic tag now-->
+          <p ><a><img class = "photo" src="./images/image-avatar.png" alt=""><a class="gray">Creation of</a> <a class="white">Jules Wyvern</a></a></p>
+    
+          <!--<footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/saulobardo">Saulobardo</a>.
+    </footer>-->
+     
 </body>
 </html>
